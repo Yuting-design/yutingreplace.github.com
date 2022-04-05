@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    text-align: center;
+}
+
+form {
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: inline-flex;
+    position: absolute;
+
+}
+label{
+    color: azure;
+}
+input{
+    margin-left: 10px;
+}
+#mybutton {
+    background-color: aliceblue;
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 2px;
+    border: none;
+}
+
+#granim-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    visibility: hidden;    
+}
+#wakeUp{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+}

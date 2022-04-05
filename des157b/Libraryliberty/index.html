@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library liberty</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="path/to/blotter.min.js"></script>
+    <script src="path/to/fliesMaterial.js"></script>
+    <script src="granim.js-2.0.0/dist/granim.min.js"></script>
+    <!-- <script src="script.js" type="module"></script> -->
+
+</head>
+
+<body>
+    <div id="container">
+        <canvas id="granim-canvas"></canvas>
+        <form>
+            <label for='spell'>Give me a word:</label>
+            <input type="text" id="spell" name="spell">
+            <div id="mybutton">Try It</div>
+        </form>
+        <div id="wakeUp"><p>I love this color!!! Could you give me more?</p></div>
+    </div>
+
+
+    <script>
+        var string = "white";
+        var hash = 0;
+        var spell = 'hello';
+        var rgb = [0, 0, 0];
+
+
+        //get text---------------------------------
+        const btn = document.querySelector('#mybutton');
+        btn.addEventListener('click', function () {
+            spell = document.getElementById('spell').value;
+            string = spell;
+            // console.log(spell);
+
+            doMagic(spell)
+            var mycanvas = document.querySelectorAll('canvas');
+            mycanvas[1].remove();
+            checkColor(rgb);
+            console.log(rgb);
+        });
+
+
+        //------random color---------------------------------
+        for (var i = 0; i < string.length; i++) {
+            hash = string.charCodeAt(i) + ((hash << 5) - hash);
+            hash = hash & hash;
+        }
+
+        String.prototype.toRGB = function () {
+            var hash = 0;
+            if (this.length === 0) return hash;
+            for (var i = 0; i < this.length; i++) {
+                hash = this.charCodeAt(i) + ((hash << 5) - hash);
+                hash = hash & hash;
+            }
+            for (var i = 0; i < 3; i++) {
+                var value = (hash >> (i * 8)) & 255;
+                rgb[i] = value;
+            }
+            return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+        }
+
+
+        //------blotter----------------------------
+        function doMagic(spell) {
+            var text = new Blotter.Text(spell, {
+                family: "serif",
+                size: 200,
+                fill: string.toRGB()
+            });
+
+            var material = new Blotter.FliesMaterial();
+
+            material.uniforms.uPointCellWidth.value = 0.01;
+            material.uniforms.uPointRadius.value = 0.5;
+            material.uniforms.uSpeed.value = 5;
+
+            var blotter = new Blotter(material, {
+                texts: text
+            });
+
+            var scope = blotter.forText(text);
+
+            scope.appendTo(document.body);
+        }
+        doMagic(spell)
+
+        //-----Granim--------------------------------------
+        var granimInstance = new Granim({
+            element: '#granim-canvas',
+            name: 'granim',
+            opacity: [1, 1],
+            states: {
+                "default-state": {
+                    gradients: [
+                        ['rgba(255, 92, 113, .20)', 'rgba(0, 42, 255, .20)'],
+                        ['rgba(0, 247, 255, .20)', 'rgba(255, 0, 183, .20)']
+                    ]
+                }
+            }
+        });
+
+        //-------if color-------------------------------------
+        function checkColor(rgb) {
+            console.log(rgb[1]);
+            if (
+                // 100 < rgb[0] && rgb[0] <= 255 &&
+                // 150 < rgb[1] && rgb[1] <= 255 &&
+                100 < rgb[2] && rgb[2] <= 255
+                ) {
+                document.querySelector('#granim-canvas').style.visibility = 'visible';
+                document.querySelector('#wakeUp').style.visibility='visible';
+            } else {
+                document.querySelector('#granim-canvas').style.visibility = 'hidden';
+                document.querySelector('#wakeUp').style.visibility='hidden';
+            }
+            var BorW = 0;
+            for (var i = 0; i < rgb.length; i++) {
+                if (rgb[i] <= 100) {
+                    BorW++;
+                }
+            }
+            console.log(BorW+'has been foound');
+            if(BorW>=2){
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('label').style.color = 'black';
+                document.querySelector('#wakeUp').style.color='black';
+            }else{
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('label').style.color = 'white';
+                document.querySelector('#wakeUp').style.color='white';
+            }
+        }
+    </script>
+</body>
+
+</html>
