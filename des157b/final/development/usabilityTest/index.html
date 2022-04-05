@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today is...</title>
+    <link rel="stylesheet" href="css/boxed-check/boxed-check.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+</head>
+
+<body>
+    
+    <header>
+        <a href="../../../index.html" id="back">BACK</a>
+        <div>
+            <h1>Today is...</h1>
+            <p>Today is a unique day. Here you can see how today is unique to others, and you can share your own unique
+                perspective on the day.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="cube" id="date"></div>
+        <div class="cube" id="add-button">
+            <h2>Add</h2>
+            <p>Your day</p>
+            <h2>HERE</h2>
+        </div>
+        <div id="spdayDisplayer">
+            <!-- add cubes here -->
+        </div>
+    </main>
+
+
+    <div id="popWindow" class="hide">
+
+        <!-- add new form -->
+        <form>
+            <!-- page 1 -->
+            <div class="add-form hide" id="page1">
+                <h2>Add your day</h2>
+                <label for="uname">Your Name
+                    <input type="text" id="uname" name="uname" placeholder="What do you prefer to be called">
+                </label>
+                <label for="spday">Today is
+                    <input type="text" id="spday" name="spday"
+                        placeholder="Is there anything special about today for you">
+                </label>
+                <button id="cancelBtn" class="rightBtn" type='button'>Cancel</button>
+                <button id="nextTo2" class="leftBtn" type='button'>Next</button>
+            </div>
+            <!-- page 2 -->
+            <div class="add-form hide" id="page2">
+                <h2>How are you feeling today</h2>
+                <div class="boxed-check-group">
+                    <label class="boxed-check boxed-check-inline">
+                        <input class="boxed-check-input feeling" type="radio" name="feeling" value="good">
+                        <div class="boxed-check-label">Good</div>
+                    </label>
+                    <label class="boxed-check boxed-check-inline">
+                        <input class="boxed-check-input feeling" type="radio" name="feeling" value="bad">
+                        <div class="boxed-check-label">Bad</div>
+                    </label>
+                    <label class="boxed-check boxed-check-inline">
+                        <input class="boxed-check-input feeling" type="radio" name="feeling" value="dontKnow" checked>
+                        <div class="boxed-check-label">I don't know</div>
+                    </label>
+                </div>
+                <label for="level">The intensity of your feelings:
+                    <input type="range" id="level" name="level" min="0" max="10">
+                </label>
+                <button id="backTo1" class="rightBtn" type='button'>Back</button>
+                <button id="nextTo3" class="leftBtn" type='button'>Next</button>
+
+            </div>
+            <!-- page 3 -->
+            <div class="add-form hide" id="page3">
+                <h2>More info</h2>
+                <label for="detials">Add some details of your day!(Optional)
+                    <textarea id="detials" name="detials" rows="5" cols="33" placeholder="Today..."></textarea>
+                </label>
+                <button id="backTo2" class="rightBtn" type='button'>Back</button>
+                <button id="submit" class="leftBtn" type='button'>Submit</button>
+            </div>
+        </form>
+
+
+        <!-- date detial info -->
+        <div id="dateDetialDisplayer" class="hide"></div>
+    </div>
+
+    <!-- user test -->
+    <button id="showUserTest" type="button">User test tasks & questions</button> 
+    <div id="usertestPW" class="show">
+        <div id="userTest" class="show">
+            <p>Hello, welcome to "Today Is"!</p>
+            <p>Thank you for helping me make the project better. In the test, you need to complete three tasks and then
+                answer three questions.</p>
+            <ul>Tasks:
+                <li>Browse the entire page</li>
+                <li>Complete an upload</li>
+                <li>View the details uploaded by three different users.</li>
+            </ul>
+            <ul>Questions:
+                <li>What do you think could be improved about the layout of the page?</li>
+                <li>What are your difficulties in uploading information?</li>
+                <li>Do you need extra guidance to complete all tasks? If so, where do you think guidance is lacking?
+                </li>
+            </ul>
+            <button id="userTestBtnC" type='button'>Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

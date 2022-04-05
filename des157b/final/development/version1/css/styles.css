@@ -1,0 +1,12 @@
+.cube{
+    height: 200px;
+    width: 200px;
+    border: solid;
+}
+.add-form{
+    border: solid;
+    padding: 2em;
+}
+.hide{
+    visibility: hidden;
+}

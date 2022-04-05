@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #311578;
+    color: rgb(235, 235, 235);
+    transition: all 2s;
+    background-image: url('images/background_dark.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: 'Dosis', sans-serif;
+}
+
+body.switch {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    background-image: url('images/background_light.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* font-family: 'Chilanka', cursive; */
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    /* make sure the columns don't get too small and text stays readable */
+    min-width: 900px;
+    margin: 1em auto;
+    padding-top: 2em;
+}
+
+header {
+    margin: 0 auto 2em auto;
+}
+
+#title{
+    position: absolute;
+    top: -1%;
+    left: 5%;
+    transform: rotate(-15deg);
+}
+h1{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 48pt;
+    line-height: 48px;
+    margin: 40px 0;
+}
+h1.switch{
+    font-family: 'Nerko One', cursive;
+    font-size: 58pt;
+}
+#banner {
+    position: relative;
+    top: 20px;
+    width: 1100px;
+    height: 250px;
+    margin: auto;
+    background-color: transparent;
+    overflow: hidden;
+    background-image: url('images/banner_dark.png');
+    background-size: cover;
+    z-index: -1;
+}
+
+#banner.switch {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+    transition: all 2s;
+    background-image: url('images/banner_light.jpg');
+    background-size: cover;
+    border: solid #34c3c8;
+}
+#ring{
+    background-image: none;
+    position: absolute;
+    width: 85px;
+    height: 158px;
+    left: 85.3%;
+    top: 35px;
+}
+#ring.switch{
+    background-image: url('images/ring.png');
+    background-size: cover;
+}
+#bunny{
+    background-image: none;
+    width: 237px;
+    height: 277px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+#bunny.switch{
+    background-image: url('images/bunny.png');
+    background-size: cover;
+}
+main {
+    display: flex;
+    justify-content: center;
+    margin: 2em auto;
+}
+
+main section {
+    
+    margin: 20px;
+    padding: 1em;
+    width: 245px;
+}
+
+#projects{
+    border-left: 8px #210860 solid;
+    background-color: rgb(58, 30, 121,0.5);
+}
+#projects.switch{
+    border:none;
+    background: none;
+}
+#research{
+    border-left: 8px #662D91 solid;
+    background-color: rgb(87, 44, 137,0.5);
+}
+#research.switch{
+    border:none;
+    background: none;
+}
+#development{
+    border-left: 8px #93278F solid;
+    background-color: rgb(147, 39, 143,0.5);
+}
+#development.switch{
+    border:none;
+    background: none;
+}
+#final{
+    border-left: 8px #9E005D solid;
+    background-color: rgb(158, 0, 93,0.5);
+}
+#final.switch{
+    border:none;
+    background: none;
+}
+
+
+
+h3{
+    font-size: 20pt;
+    font-family: 'Berkshire Swash', cursive;
+}
+h3.switch{
+    padding-left: 15px;
+    font-family: 'Nerko One', cursive;
+    font-size: 24pt;
+}
+
+a {
+    text-decoration: none;
+    width: 215px;
+}
+
+ol,
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+section a {
+    line-height: 1.1em;
+    display: inline-block;
+    padding: 7px 0;
+    color: rgba(235, 235, 235, 0.8);
+    font-size: 14pt;
+}
+
+section a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px white;
+}
+
+section.switch a {
+    padding-left: 15px;
+    color: #333;
+}
+
+section.switch a:hover {
+    border: 3px #000000 solid;
+    background-color: rgb(75, 75, 75);
+    color: rgb(235, 235, 235);
+    border-radius:20px;
+    padding:5px 15px;
+    text-shadow:none;
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    background-color: rgb(158, 0, 93,0.5);
+    color: rgba(235, 235, 235, 0.8);
+    border: none;
+    border-radius: 2px;
+
+}
+
+button:hover {
+    text-shadow: 0 0 2px white;
+    background-color: rgb(158, 0, 92);
+    cursor: pointer;
+}
+
+button.switch {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+    border-radius: 4px;
+}
+
+button.switch:hover {
+    background-color: rgb(85, 225, 243);
+    color: rgb(0, 0, 0);
+}

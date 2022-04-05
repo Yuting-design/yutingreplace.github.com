@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        header {
+            background-color: rgb(106, 25, 186);
+
+        }
+
+        header,
+        footer {
+            width: 100%;
+            height: 60px;
+        }
+        footer{
+            text-align: center;
+        }
+        h1{
+    margin-top: 60px;
+}
+        p {
+            color: dimgray;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(106, 25, 186);
+        }
+
+        a:hover {
+            color: rgb(22, 226, 233);
+        }
+
+        #back {
+            line-height: 60px;
+            position: absolute;
+            left: 40px;
+            text-decoration: none;
+            color: rgb(180, 155, 193);
+        }
+
+        #back:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        html {
+            background-color: #efefef;
+        }
+
+        #container {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            max-width: 800px;
+            margin: 0 20% 0 20%;
+            position: relative;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="back">BACK</a>
+    </header>
+    <div id="container">
+        <h1>Arrow Functions</h1>
+
+        <p>This function accepts a string as parameter. It will return "Hello" + "parameter".</p>
+        <p>More learning resources: <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">MDN</a>
+        </p>
+
+
+        <h2>Named Function</h2>
+        <code>
+            <pre>
+            function(parameter){
+                Do something();
+            }
+        </pre>
+        </code>
+
+        <h2>Function Expression</h2>
+        <code>
+            <pre>
+            const sayHello = function(parameter){
+                return `Hello ${parameter}`;
+            }
+        </pre>
+        </code>
+
+        <h2>Arrow Function</h2>
+        <code>
+            <pre>
+            //Basic
+            const sayHello = (parameter) => {
+                return `Hello ${parameter}`;
+            } 
+
+            //if one parameter, you can removing the parentheses.
+            const sayHello = parameter => {
+                return `Hello ${parameter}`;
+            }
+
+            //if one parameter, contains only one statement, and the function returns a value,
+              you can also remove the curly braces and the return keyword.
+              const sayHello = parameter => `Hello ${parameter}`;
+        </pre>
+        </code>
+    </div>
+
+    <footer> Yuting Li </footer>
+
+</body>
+
+</html>

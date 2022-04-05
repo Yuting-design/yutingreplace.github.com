@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feasibility Report</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html" id="back">BACK</a>
+    </header>
+    <div id="container">
+        <h1>Feasibility Report</h1>
+        <section>
+            <h2>Features</h2>
+            <p>My final project, "Today is", shows how each day is special to people by collecting data and
+                converting it into visual information. Users can enter and submit why today is a special day. Their
+                information will appear on the web page and will be colored according to what is typed. Users can
+                view information uploaded by others and see more details by clicking on the title.</p>
+            <p>"Today is" includes the ability to display dates, collect data, display data, and information and color
+                conversion.</p>
+        </section>
+        <section>
+            <h2>Technologies</h2>
+            <h3>Display dates</h3>
+            <p>The Display Date function shows the user the date of the day, including word month and numeric date.</p>
+            <p>Although I have never tried to capture and display time in other peoject, I do not think it is difficult
+                after investigating. I can get the time using <a
+                    href="https://www.w3schools.com/jsref/jsref_obj_date.asp">Date()</a> and the <a
+                    href="https://www.w3schools.com/jsref/jsref_tolocalestring.asp">ECMAScript Internationalization
+                    API</a>. I can then write the data to the document using innerHTML().</p>
+            <h3>Collect data</h3>
+            <p>Collect Data collects the characters or options uploaded by the user.</p>
+            <p>I'll use the <a href="https://www.w3schools.com/tags/tag_form.asp">HTML form</a> element to get data and
+                then read it in javascript. I don't expect this to be too difficult, as I did this exercise in an
+                earlier FrendList assignment.</p>
+            <h3>Display data</h3>
+            <p>The Display data function displays the uploaded data in an orderly manner on the web page.</p>
+            <p>After retrieving data from a table, Display Data writes the data to an HTML file in a specific format to
+                Display on the page. It calls the Get Color function to get a color data.Javascript also needs to work
+                with CSS to arrange the different "days". This may require the application of grid or Flex Box. I might
+                need to use library to arrange the boxes. The optional library is <a
+                    href="https://masonry.desandro.com/">Masonry</a>.</p>
+            <h3>Information and color conversion</h3>
+            <p>In this section, I plan to connect the data uploaded by users with colors. </p>
+            <p>There are two options. Plan A: I use the emotion recognition API to distinguish the emotional tendencies
+                of the data, and then set different tendencies to different colors. The optional APIs are <a
+                    href="https://deepai.org/machine-learning-model/sentiment-analysis">Sentiment Analysis API</a> and
+                <a href="https://apilayer.com/marketplace/description/text_to_emotion-api#documentation-tab">Text to
+                    Emotion API</a>. Plan B: I convert user data directly to color and display it in style. This is
+                easier because I've managed to do this with Library Liberty.</p>
+        </section>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

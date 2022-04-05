@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Design Comp</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html" id="back">BACK</a>
+    </header>
+    <div id="container">
+        <h1>Interactive Design Comp</h1>
+        <div>
+            <h3>Click to see more</h3>
+            <img class="interactiveImage" src="image/designCompImages/1.png" alt="comp">
+        </div>
+        <h3>All images</h3>
+        <div class="moodBoard">
+            <div id="images">
+                <img src="image/designCompImages/1.png" alt="comp1">
+                <img src="image/designCompImages/2.png" alt="comp2">
+                <img src="image/designCompImages/3.png" alt="comp3">
+                <img src="image/designCompImages/4.png" alt="comp4">
+                <img src="image/designCompImages/5.png" alt="comp5">
+                <img src="image/designCompImages/6.png" alt="comp6">
+                <img src="image/designCompImages/7.png" alt="comp7">
+                <img src="image/designCompImages/8.png" alt="comp8">
+                <img src="image/designCompImages/9.png" alt="comp9">
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script>
+        var i = 1;
+        const showingImage = document.querySelector('.interactiveImage');
+        showingImage.addEventListener('click',function(){
+            if(i==9){
+                i=1;
+            }else{
+                i++;
+            }
+            showingImage.src = `image/designCompImages/${i}.png`;
+        })
+    </script>
+</body>
+
+</html>

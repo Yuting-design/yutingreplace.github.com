@@ -1,0 +1,52 @@
+/*
+ * BoxedCheck from flyArtist v1.0.7
+ * https://github.com/flyartist/boxed-check
+ */
+.boxed-check-group,
+.boxed-check-group .boxed-check {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.boxed-check-group .boxed-check {
+    display: block
+}
+
+.boxed-check-group .boxed-check:last-child {
+    margin-bottom: 0
+}
+
+.boxed-check-group .boxed-check.boxed-check-inline {
+    display: inline-block;
+    margin-bottom: 0
+}
+
+.boxed-check-group .boxed-check .boxed-check-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none
+}
+
+.boxed-check-group .boxed-check .boxed-check-input:disabled+.boxed-check-label {
+    border: 1px dashed #bec2c6;
+    opacity: .4;
+    cursor: not-allowed
+}
+
+.boxed-check-group .boxed-check .boxed-check-input:checked+.boxed-check-label,
+.boxed-check-group .boxed-check .boxed-check-input:not(:disabled)+.boxed-check-label:hover {
+    border-color: #740df3;
+    color: #740df3;
+}
+
+
+.boxed-check-group .boxed-check .boxed-check-label {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    padding: .5rem 1.3rem;
+    margin: 0;
+    border-radius: 2rem;
+    cursor: pointer
+}
+

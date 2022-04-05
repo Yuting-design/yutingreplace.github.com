@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today is...</title>
+    <link rel="stylesheet" href="css/boxed-check/boxed-check.min.css" />
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <a href="../../../index.html" id="back">BACK</a>
+        <div>
+            <h1>Today is...</h1>
+        </div>
+    </header>
+    <main>
+        <div class="cube" id="date"></div>
+        <div class="cube" id="add-button">
+            <h2>Add</h2>
+            <p>Your day</p>
+            <h2>HERE</h2>
+        </div>
+    </main>
+    <form>
+        <div class="add-form hide" id="page1">
+            <label for="uname">Your Name</label>
+            <input type="text" id="uname" name="uname" placeholder="A big jellyfish">
+
+            <label for="spday">Today is</label>
+            <input type="text" id="spday" name="spday" placeholder="A day to enjoy food">
+            <button id="cancelBtn" type='button'>Cancel</button>
+            <button id="nextTo2" type='button'>Next</button>
+        </div>
+        <div class="add-form hide" id="page2">
+            <div class="boxed-check-group">
+                <label class="boxed-check boxed-check-inline">
+                    <input class="boxed-check-input feeling" type="radio" name="feeling" value="good">
+                    <div class="boxed-check-label">Good</div>
+                </label>
+                <label class="boxed-check boxed-check-inline">
+                    <input class="boxed-check-input feeling" type="radio" name="feeling" value="bad">
+                    <div class="boxed-check-label">Bad</div>
+                </label>
+                <label class="boxed-check boxed-check-inline">
+                    <input class="boxed-check-input feeling" type="radio" name="feeling" value="dontKnow" checked>
+                    <div class="boxed-check-label">I don't know</div>
+                </label>
+                <button id="backTo1" type='button'>Back</button>
+                <button id="nextTo3" type='button'>Next</button>
+            </div>
+
+            <label for="level">Level:</label>
+            <input type="range" id="level" name="level" min="0" max="10">
+        </div>
+        <div class="add-form hide" id="page3">
+            <label for="detials">Add some details if you want!</label>
+            <textarea id="detials" name="detials" rows="5" cols="33">It was a dark and stormy night...</textarea>
+            <button id="backTo2" type='button'>Back</button>
+            <button id="submit" type='button'>Submit</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
