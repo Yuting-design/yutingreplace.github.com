@@ -1,0 +1,161 @@
+ul,ol,li {
+    list-style-type: none;
+}
+ul{
+    padding: 0;
+}
+
+li{
+    margin-top: 10px;
+}
+a {
+    text-decoration: none;
+    color: rgb(46, 0, 0);
+}
+h1,h2{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-weight: 100px;
+}
+
+h1{
+    font-size: 40px;
+}
+/*banner part start--------------------------------------*/
+#banner{
+    width: 800px;
+    height: 250px;
+    border-style: solid;
+    margin: auto;
+}
+#banner ul{
+    margin-top: 0px;
+    width: 800px;
+    height: 250px;
+    display: flex;
+    background-color: rgb(79, 84, 72);
+}
+#banner ul li{
+    margin-top: 125px;
+}
+
+
+#banner ul li div {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgb(255, 158, 158);
+    border-radius: 49%;
+}
+#banner ul li:hover{
+    animation: jumpUp 1s ease-in-out infinite alternate;
+}
+@keyframes jumpUp {
+    from { margin-top: 125px;}
+    to { margin-top: 1px; }
+}
+/*trangel color--------------------------*/
+#banner ul #orange div{border-bottom: 100px solid rgb(255, 213, 134);}
+#banner ul #chocolate div{border-bottom: 100px solid rgb(222, 166, 126);}
+#banner ul #yellow div {border-bottom: 100px solid rgb(255, 255, 173);}
+#banner ul #aqua div{border-bottom: 100px solid rgb(157, 255, 255);}
+#banner ul #grassgreen div{border-bottom: 100px solid rgb(145, 224, 145);}
+#banner ul #skyblue div{border-bottom: 100px solid rgb(215, 242, 251);}
+#banner ul #pink div{border-bottom: 100px solid rgb(255, 218, 224);}
+#banner ul #red div{border-bottom: 100px solid rgb(255, 142, 142);}
+
+
+/*banner part end---------------------------------------*/
+
+body {
+    background-color: #eff3d0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header section{
+    margin-bottom: 35px;
+}
+
+footer {
+    /*background-color: gray;*/
+    text-align: center;
+}
+
+/*main start----------------------------------------------*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 800px;
+    margin: auto;
+}
+
+main nav {
+    display: grid;
+}
+
+main nav section {
+    padding: 25px;
+    border-style: solid;
+    border-color: rgba(255, 250, 240, 0.581);
+    border-radius: 10px;
+}
+
+/*colors---------------------------------*/
+#leftTop {
+    background-color: #F9CDAD;
+}
+
+#leftTop:hover {
+    background-color: #f6af7c;
+}
+/*-------------------*/
+
+#leftBottom {
+    background-color: #FC9D9A;
+}
+
+#leftBottom:hover {
+    background-color: #fc718b;
+}
+/*----------------------*/
+#middle section {
+    background-color: #a3d4be;
+}
+
+#middle section:hover {
+    background-color: #72c8a1;
+}
+/*----------------------*/
+#right section {
+    background-color: #FC9D9A;
+}
+
+#right section:hover {
+    background-color: #fc718b;
+}
+/*-----------------------*/
+#left a:hover{
+    color:#8aeec1;
+}
+#middle a:hover{
+    color:#FE4365;
+}
+#right a:hover{
+    color:#8aeec1;
+}
+
+/*main end-------------------------------------------*/
+
+@media only screen and (min-width: 800px) {
+    body {
+        width: 800px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    body {
+        width: 1200px;
+    }
+}

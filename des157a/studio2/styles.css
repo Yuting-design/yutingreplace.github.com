@@ -1,0 +1,195 @@
+
+/* basic sets */
+a {
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(242, 242, 242);
+
+}
+/* header-------------------------------------------------------- */
+header{
+    position: fixed;
+    top: 0px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+h1 {
+    font-family: 'Sofia', cursive;
+    padding-left: 20px;
+    padding-bottom: 3px;
+    margin: 0px;
+}
+h1 a{
+    font-family: 'Sofia', cursive;
+    color: rgb(205, 205, 205);
+    font-size: 28px;
+}
+h1 a:hover{
+    color: rgb(255, 255, 255);
+}
+/* header end------------------ */
+
+/* main start----------------------------- */
+
+/* navigater setting--------------- */
+nav {
+    position: absolute;
+    font-family: 'Sofia', cursive;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.navigater {
+    padding-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 28px;   
+}
+.navigater:hover{
+    font-size: 72px;
+    transition: all 0.75s ease;
+}
+/* navigater setting end--------- */
+
+#show{
+    height: 480px;
+    width: 480px;
+    overflow: hidden;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    box-sizing: border-box;
+    border-style: double;
+    border-width: 4px;
+}
+img{
+    position: relative;
+    width: 480px;
+    left: 0;
+    top: 0;
+    transition: all 2s ease;
+    /* animation: fadein 2s; */
+}
+/* -------------------------- */
+article{
+    color: rgb(222, 222, 222);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Lora', serif;
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+    /* width will be set by js */
+    transform: translate(-50%, 0);
+    width: 400px;
+    padding: 10px 10px 20px 15px;
+}
+
+article p {
+    margin: 0;
+    font-size: 14px;
+}
+article h2{
+    font-size: 20px;
+    margin: 0;
+}
+/* main end----------------------------------- */
+ /* footer start---------------------------- */
+footer{
+    position: fixed;
+    padding-bottom: 5px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(242, 242, 242);
+}
+footer p,a{
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+}/* footer end ------------------------------ */
+
+/* zoom functions ---------------------------------------*/
+#image div {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    z-index: 1;
+}
+#topleft {
+    top: 0;
+    left: 0;
+}
+
+#topright {
+    top: 0;
+    right: 0;
+}
+
+#bottomleft {
+    bottom: 0;
+    left: 0;
+}
+
+#bottomright {
+    bottom: 0;
+    right: 0;
+}
+
+#center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* zoom size set */
+.topleft,.topright,.bottomleft,.bottomright,.center {
+    width: 960px;
+}
+.topleft {
+    top: 0;
+    left: 0;
+}
+.topright {
+    top: 0;
+    left: -480px;
+}
+.bottomleft {
+    left: 0;
+    top: -480px;
+}
+.bottomright {
+    top: -480px;
+    left: -480px;
+}
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.start {
+    width: 480px;
+    left: 0;
+    top: 0;
+}
+/* zoom end-------------------------------------------------- */
+
+/* fadein testing */
+/* .fade{
+    animation: fadein 2s;
+}
+@keyframes fadein {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity: 1;
+	}
+} */
+
+

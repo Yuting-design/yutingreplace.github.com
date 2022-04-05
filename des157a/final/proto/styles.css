@@ -1,0 +1,233 @@
+/* overall set-------------------------------------------- */
+body {
+    background-color: rgb(226, 214, 193);
+    line-height: 1.5em;
+    font-family: 'Sigmar One', cursive;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+div {
+    padding: 20px;
+}
+
+/* button style set------------------------------------- */
+button {
+    padding: 20px;
+    background-color: rgb(255, 91, 116);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(255, 51, 92);
+}
+
+
+/* player image and score set---------------------------------- */
+#pig1 {
+    left: 12%;
+}
+
+#pig2 {
+    right: 10%;
+}
+
+#pig2 img {
+    transform: translate(10%, 0);
+}
+
+.pigs p {
+    margin: 25px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.pigs {
+    position: absolute;
+    bottom: 180px;
+}
+
+#score1,
+#score2 {
+    font-size: 40px;
+}
+
+/* win style set---------------------------------------------------------------------------- */
+#score h2 {
+    bottom:50px;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Sigmar One', cursive;
+}
+/* dice position------------------------------------  */
+#dice {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#dice img {
+    margin: 10px;
+    border-radius: 10px;
+}
+/* discrb game sentences------------------------- */
+#game {
+    padding: 0px;
+    position: absolute;
+    bottom: 260px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#game p {
+    margin: 0;
+}
+
+/* added button position set------------------------------------------------------ */
+
+#quit {
+    height: 40px;
+    top: 20px;
+    left: 30px;
+    padding: 10px;
+    background-color: rgb(255, 200, 205);
+    transform: translate(0, 0);
+}
+
+#quit:hover {
+    color: rgb(255, 91, 116);
+}
+
+#rollagain {
+    transform: translate(-90%, 0);
+}
+
+#pass {
+    transform: translate(30%, 0);
+}
+
+
+/* footer set------------------------------------------------------------ */
+footer {
+    line-height: 1.15em;
+    color: white;
+    position: absolute;
+    padding-bottom: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(203, 67, 94);
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer article {
+    padding: 10px 15% 0 15%;
+
+    font-size: 12px;
+}
+
+footer article p {
+    margin: 0;
+    padding-top: 8sspx;
+}
+
+footer>p,
+a {
+    margin:5px;
+    text-align: center;
+    color: rgb(51, 51, 51);
+}
+/* overlays----------------------------------------------- */
+/* show or hide */
+.hidden {
+    visibility: hidden;
+    z-index: -2;
+}
+
+.showing {
+    visibility: visible;
+    z-index: 2;
+}
+
+.overlay{
+    color: blanchedalmond;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;  
+}
+.overlay h2{
+    margin: 0;
+    color: black;
+    font-family: 'Sigmar One', cursive;
+    font-size: 35px;
+}
+.overlay button{
+    font-family: 'Sigmar One', cursive;
+    font-size: 25px;
+}
+/* startpage section----- */
+#startPage{
+/*     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    background-color: rgb(226, 214, 193);
+}
+#startPage img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* checkRules section----- */
+
+
+/* winner section----- */
+#showWinner,#checkRules article{
+    padding-left: 80px;
+    padding-right: 80px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    background-color: rgb(226, 214, 193);
+    width: 650px;
+    height: 550px;
+    border: 4px solid rgb(203, 67, 94);
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#showWinner img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+#showWinner button,#checkRules button{
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+    transform: translate(-50%);
+}
+/* ------------------------------- */
+
+/* ------------------------- */
+.mysources h1, h2{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    padding:40px;
+}

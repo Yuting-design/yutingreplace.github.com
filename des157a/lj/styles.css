@@ -1,0 +1,125 @@
+ul,ol,li {
+    list-style-type: none;
+}
+ul{
+    padding: 0;
+}
+
+li{
+    margin-top: 10px;
+}
+a {
+    text-decoration: none;
+    color: rgb(46, 0, 0);
+}
+
+h1,h2{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-weight: 100px;
+}
+
+
+header h2{
+    font-size: 40px;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+h1 a {
+    color: black;
+}
+h1>a:hover{
+    color:#27855b;
+}
+
+body {
+    background-color: #eff3d0;
+    font-family: 'Montserrat', sans-serif;
+}
+/* header & footer------------------------------------------------------- */
+header section{
+    margin-bottom: 35px;
+}
+
+footer {
+    text-align: center;
+}
+
+/*main start----------------------------------------------*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr ;
+    width: 800px;
+    margin: auto;
+}
+
+main section {
+    display: grid;
+}
+
+main section article{
+    
+    padding: 25px;
+    border-style: solid;
+    border-color: rgba(255, 250, 240, 0.581);
+    border-radius: 10px;
+}
+
+img {
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+  }
+  figcaption{
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    color: rgb(37, 37, 37);
+  }
+
+/*colors---------------------------------*/
+/* one--------------------- */
+.red {
+    background-color: #F9CDAD;
+}
+.red a {
+    color: #fd5400;
+}
+.red a:hover{
+    color:#8aeec1;
+}
+
+/*two-------------------*/
+.green {
+    background-color: #a5d5bf;
+}
+.green a {
+    color: #008448;
+}
+.green a:hover{
+    color:#FE4365;
+}
+
+
+
+/*main end-------------------------------------------*/
+
+@media only screen and (min-width: 800px) {
+    body {
+        width: 800px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    body {
+        width: 1200px;
+    }
+}

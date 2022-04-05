@@ -1,0 +1,42 @@
+/* pb style---------------------------------------------- */
+body{
+    background-color: rgb(255, 245, 231);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+}
+article{
+    padding: 40px;
+    width: 650px;
+    margin: auto;
+}
+header{
+    width: 100%;
+    background-color: rgb(224, 47, 82);
+}
+
+h1{
+    padding: 20px;}
+a{
+    text-decoration: none;
+    color: rgb(190, 30, 62);
+}
+a:hover{
+    color: rgb(255, 143, 62);
+}
+section{
+    margin-bottom: 40px;
+}
+
+p{
+    font-size: 16px;
+}
+
+h1 a{
+    color:rgb(10, 10, 10);
+}
+h1 a:hover{
+    color: white;
+}
+footer {
+    text-align: center;
+}

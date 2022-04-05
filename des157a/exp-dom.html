@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuting Experimentation</title>
+</head>
+
+<body>
+    <h1>Experimentation</h1>
+    <div id="container"></div>
+    <script>
+        //Ask for a user enter.
+        var userOrder = prompt('Please enter a positive integer.', '');
+
+        //check if the user enter a whole number. If not, keep ask for a whole number.
+        while(userOrder%1 != 0 || userOrder === ''){
+
+            var userOrder = prompt('It is not a whole number. Please enter a positive integer.', '');
+        }
+
+        while(userOrder<= 0){
+
+            var userOrder = prompt('It is not a positive number. Please enter a positive integer.', '');
+        }
+        //now we know the user enter is a positive integer.
+
+//---------------------------------------------------------
+        //a function ruturn a random number.
+        function randomColor(){
+            return Math.floor(255*Math.random());
+        }
+        // three random numbers.
+        var r = randomColor()
+        var g = randomColor()
+        var b = randomColor()
+//--------------------------------------------------------------
+        //find container
+        var myContainer = document.getElementById('container');  
+
+//----------------------------------------------------------------------------
+        //a finction creat a new line in the container
+        function newLine(myContainer){
+            //html adding
+            var nodeLine = document.createElement("section");
+            myContainer.appendChild(nodeLine);
+            //css setting
+            nodeLine.style.display = 'flex';
+            return nodeLine;
+        }
+        //a function creat a new ball in the newLine
+        function newBall(nodeLine){
+            //html adding
+            var nodeBall = document.createElement("div");
+            nodeLine.appendChild(nodeBall);
+            //css setting
+            nodeBall.style.width = '100px';
+            nodeBall.style.height = '100px';
+            nodeBall.style.backgroundColor = `rgb(${randomColor()}, ${g}, ${b})`;
+            nodeBall.style.borderRadius ='50%';
+        }
+//---------------------------------------------------------------------------
+        function creatBallMap(){
+            for (i = 0; i < userOrder; i++) {
+                //creat a new line
+                var nodeLine = newLine(myContainer);
+                for (n = 0; n <= i; n++) {
+                    //creat a new ball in the new line
+                    newBall(nodeLine);
+                }
+            }
+        }
+        //run
+        creatBallMap();
+        
+    </script>
+    
+    
+    
+</body>
+
+</html>
